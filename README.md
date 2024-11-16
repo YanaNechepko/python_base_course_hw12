@@ -1,2 +1,2 @@
-# python_base_course_hw12
-Repository for 12th homework python base course
+# Базовый курс Python ДЗ №12
+Репозиторий для 12 домашнего задания по базовому курсу Python
