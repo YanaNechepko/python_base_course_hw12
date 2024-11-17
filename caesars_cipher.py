@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from pathlib import Path
 
 import enchant
 
@@ -65,9 +66,15 @@ class CaesarsCipher:
 
 
 def main() -> None:
+    output_file = input('Введите путь к файлу для сохранения результата: ')
+    output_file = Path(output_file)
+
     caesars_cipher = CaesarsCipher()
     msg = caesars_cipher.decrypt('o3zR v..D0?yRA0R8FR8v47w0ER4.R1WdC!sLF5D')
     print(f'{caesars_cipher.key}: {msg}')
+
+    with output_file.open('w', encoding='utf-8') as f:
+        f.write(f'{caesars_cipher.key}: {msg}\n')
 
 
 if __name__ == '__main__':
